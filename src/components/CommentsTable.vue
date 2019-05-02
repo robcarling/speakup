@@ -16,8 +16,8 @@
         <td>{{ comment.body }}</td>
         <td align="right">
           <button class="btn btn-danger" v-on:click="deleteComment(comment.id)">
-            <i class="fa fa-trash"></i> 
-            Delete
+            <i class="fa fa-trash"></i>  
+            <span>Delete</span>
           </button>
         </td>
       </tr>

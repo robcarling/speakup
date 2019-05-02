@@ -3,6 +3,7 @@ body {
   font-weight: 300;
 }
 h1, h2, h3, h4, h5, .btn, .nav-item { font-family: Raleway; font-weight: 700; }
+h1 i, h2 i, h3 i, h4 i, h5 i { margin-right: 5px; }
 .btn { font-weight: 400; }
 a, a:hover, a:active { color: #3C97D3 }
 
@@ -15,9 +16,7 @@ a, a:hover, a:active { color: #3C97D3 }
 .nav-item { text-transform: uppercase; }
 .nav-link.router-link-active { color: #5bb0e5; }
 
-.gap {
-  margin-top: 50px;
-}
+.gap { margin-top: 50px }
 
 thead { background-color: #f9f9f9; font-weight: 700; }
 
@@ -41,4 +40,17 @@ footer {
 .error { color: #a90707; font-size: .8em; }
 .btn-primary { background-color: #3C97D3 !important; outline: none; }
 .btn-danger { background-color: #a90707 !important; outline: none; }
-.btn i { margin: 0 3px 0 0; }
+.btn i { margin: 0 5px 0 0; }
+
+
+@media (max-width: 566px) {
+  .btn-danger span { display: none; }
+  .btn.btn-danger i { margin: 0; }
+  .gap { margin-top: 20px }
+  h1, h3 { font-size: 1.5em; }
+  .navbar-expand-sm .navbar-nav .nav-link {
+    text-align: right;
+    padding: 3px 0;
+    font-size: .9em;
+  }
+}

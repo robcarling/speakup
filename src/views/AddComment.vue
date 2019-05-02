@@ -3,8 +3,8 @@
     <div class="card">
       <div class="card-header">
         <h3>
-          {{ title }} 
-          <i class="fa fa-comment"></i>
+          <i class="fa fa-comment"></i> 
+          {{ title }}
         </h3>
       </div>
       <comment-form></comment-form>

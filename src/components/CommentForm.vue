@@ -16,7 +16,7 @@
         <span class="error">{{ errors.first('Body') }}</span>
       </div>
       <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="Add Item" />
+        <button @submit="addItem" class="btn btn-primary"><i class="fa fa-plus"></i> Add Comment</button>
       </div>
     </form>
   </div>
