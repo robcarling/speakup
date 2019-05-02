@@ -8,16 +8,16 @@
 </template>
 
 <script>
-import CommentsTable from '@/components/CommentsTable.vue'
+import CommentsTable from "@/components/CommentsTable.vue";
 
 export default {
   data() {
     return {
-      title: 'All Comments'
+      title: "All Comments"
     };
   },
   components: {
-    'comments-table': CommentsTable
+    "comments-table": CommentsTable
   }
 };
 </script>

@@ -7,16 +7,29 @@
     <form v-on:submit.prevent="addItem">
       <div class="form-group">
         <label>Your Name:</label>
-        <input type="text" class="form-control" v-validate="'required'" name="Name" v-model="comment.name" />
-        <span class="error">{{ errors.first('Name') }}</span>
+        <input
+          type="text"
+          class="form-control"
+          v-validate="'required'"
+          name="Name"
+          v-model="comment.name"
+        />
+        <span class="error">{{ errors.first("Name") }}</span>
       </div>
       <div class="form-group">
         <label>Your Comment:</label>
-        <textarea class="form-control" v-validate="'required'" name="Body" v-model="comment.body"></textarea>
-        <span class="error">{{ errors.first('Body') }}</span>
+        <textarea
+          class="form-control"
+          v-validate="'required'"
+          name="Body"
+          v-model="comment.body"
+        ></textarea>
+        <span class="error">{{ errors.first("Body") }}</span>
       </div>
       <div class="form-group">
-        <button @submit="addItem" class="btn btn-primary"><i class="fa fa-plus"></i> Add Comment</button>
+        <button @submit="addItem" class="btn btn-primary">
+          <i class="fa fa-plus"></i> Add Comment
+        </button>
       </div>
     </form>
   </div>
@@ -35,22 +48,20 @@ export default {
   },
   methods: {
     addItem: function() {
-        this.$validator.validateAll().then((result) => {
+      this.$validator.validateAll().then(result => {
         if (result) {
           this.axios
             .post(this.proxyUrl + this.apiUrl, this.comment)
-            .then(
-                this.showSuccess = true,
-                this.comment = {}
-            );
+            .then((this.showSuccess = true), (this.comment = {}));
         }
-        if(!result){ this.showErrors = true }
-      })
+        if (!result) {
+          this.showErrors = true;
+        }
+      });
     },
     pushToCommentList() {
       this.$router.push("/all-comments");
     }
   }
-}
+};
 </script>
-

@@ -1,9 +1,9 @@
 import Vue from "vue";
-import router from './router'
+import router from "./router";
 import VueAxios from "vue-axios";
 import axios from "axios";
 import VueLodash from "vue-lodash";
-import VeeValidate from 'vee-validate';
+import VeeValidate from "vee-validate";
 
 import App from "./App.vue";
 

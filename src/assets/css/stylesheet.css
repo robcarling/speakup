@@ -13,6 +13,7 @@ a, a:hover, a:active { color: #3C97D3 }
   width: 150px;
   height: 51px;
 }
+.navbar { border-bottom: 1px solid #dfdfdf; }
 .nav-item { text-transform: uppercase; }
 .nav-link.router-link-active { color: #5bb0e5; }
 

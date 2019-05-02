@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from "vue";
 import VueRouter from "vue-router";
 import AddComment from "@/views/AddComment.vue";
 import AllComments from "@/views/AllComments.vue";
@@ -35,6 +35,5 @@ router.beforeResolve((to, from, next) => {
 router.afterEach(() => {
   NProgress.done();
 });
-
 
 export default router;

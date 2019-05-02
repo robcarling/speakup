@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-header">
         <h3>
-          <i class="fa fa-comment"></i> 
+          <i class="fa fa-comment"></i>
           {{ title }}
         </h3>
       </div>
@@ -13,16 +13,16 @@
 </template>
 
 <script>
-import CommentForm from '@/components/CommentForm.vue'
+import CommentForm from "@/components/CommentForm.vue";
 
 export default {
   data() {
     return {
-      title: 'Add a Comment '
+      title: "Add a Comment "
     };
   },
   components: {
-    'comment-form': CommentForm
+    "comment-form": CommentForm
   }
 };
 </script>
