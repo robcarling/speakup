@@ -1,31 +1,41 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <nav class="navbar navbar-expand-sm bg-light">
+      <ul class="navbar-nav right">
+        <li class="nav-item">
+          <router-link :to="{ name: 'AllComments' }" class="nav-link"
+            >All Comments</router-link
+          >
+        </li>
+        <li class="nav-item">
+          <router-link :to="{ name: 'AddComment' }" class="nav-link"
+            >Add Comment</router-link
+          >
+        </li>
+      </ul>
+    </nav>
+    <transition name="fade">
+      <div class="gap container">
+        <router-view></router-view>
+      </div>
+    </transition>
   </div>
 </template>
 
+<script>
+export default {};
+</script>
+
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
 }
-#nav {
-  padding: 30px;
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.gap {
+  margin-top: 50px;
 }
 </style>
